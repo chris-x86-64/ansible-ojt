@@ -1,0 +1,9 @@
+---
+#- name: install httpd
+#  yum: name=httpd state=latest
+
+- name: write groupvar to {{ item }}
+  template: src=groupvar.j2 dest=/tmp/groupvar_output_{{ item }}
+  with_items: "{{ destinations }}"
+  tags:
+    - trivial
