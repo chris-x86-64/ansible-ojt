@@ -1,0 +1,5 @@
+---
+- name: Playbook for group `training'
+  hosts: training
+  roles:
+    - role-training

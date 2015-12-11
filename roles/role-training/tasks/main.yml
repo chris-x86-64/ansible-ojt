@@ -1,0 +1,6 @@
+---
+#- name: install httpd
+#  yum: name=httpd state=latest
+
+- name: write groupvar to /tmp/groupvar_output
+  template: src=groupvar.j2 dest=/tmp/groupvar_output
